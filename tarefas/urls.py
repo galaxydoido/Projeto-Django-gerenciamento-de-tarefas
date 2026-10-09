@@ -1,6 +1,7 @@
 from django.urls import path
-from tarefas.views import index
+from . import views 
 
 urlpatterns = [
-    path('', index),
+    path('', views.lista_tarefas, name='lista_tarefas'), 
+    path('nova/', views.form_tarefa, name='form_tarefa'),
 ]
